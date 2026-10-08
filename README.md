@@ -8,11 +8,21 @@ Claude Code skills, packaged as a plugin.
 
 ## Install
 
-Link a skill into your personal skills:
+Install all skills as a plugin, from inside Claude Code:
+
+```
+/plugin marketplace add Hserfx/skills
+/plugin install hserfx-skills@hserfx
+```
+
+Skills are then namespaced, e.g. `/hserfx-skills:cheat-sheet`. Pull updates with `/plugin marketplace update hserfx`.
+
+Or link every skill into your personal skills (unprefixed names):
 
 ```sh
-git clone https://github.com/Hserfx/skills.git
-ln -s "$PWD/skills/skills/cheat-sheet" ~/.claude/skills/cheat-sheet
+git clone https://github.com/Hserfx/skills.git ~/skills-repo
+mkdir -p ~/.claude/skills
+for d in ~/skills-repo/skills/*/; do ln -s "$d" ~/.claude/skills/"$(basename "$d")"; done
 ```
 
 The cheat-sheet script needs only `python3` (standard library).

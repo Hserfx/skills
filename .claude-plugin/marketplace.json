@@ -1,0 +1,16 @@
+{
+  "name": "hserfx",
+  "owner": {
+    "name": "Hserfx"
+  },
+  "metadata": {
+    "description": "Personal Claude Code skills by Hserfx."
+  },
+  "plugins": [
+    {
+      "name": "hserfx-skills",
+      "source": "./",
+      "description": "Personal Claude Code skills by Hserfx."
+    }
+  ]
+}
